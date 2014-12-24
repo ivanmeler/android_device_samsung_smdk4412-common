@@ -249,6 +249,7 @@ on post-fs-data
     chown system radio /sys/class/power_supply/battery/batt_vfocv
     chown system radio /sys/class/power_supply/battery/batt_lp_charging
     chown system radio /sys/class/power_supply/battery/batt_charging_source
+    chown system radio /sys/class/power_supply/battery/charging_enabled
     chown system radio /sys/class/power_supply/battery/test_mode
     chown system radio /sys/class/power_supply/battery/wc_status
     chown system radio /sys/class/power_supply/battery/wpc_pin_state
