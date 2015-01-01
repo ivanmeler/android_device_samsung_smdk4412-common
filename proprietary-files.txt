@@ -17,6 +17,7 @@ system/etc/wifi/nvram_mfg.txt_semcosh
 system/etc/wifi/nvram_net.txt
 system/etc/wifi/nvram_net.txt_murata
 system/etc/wifi/nvram_net.txt_semcosh
+system/lib/hw/hwcomposer.smdk4x12.so
 system/lib/egl/libEGL_mali.so
 system/lib/egl/libGLESv1_CM_mali.so
 system/lib/egl/libGLESv2_mali.so
