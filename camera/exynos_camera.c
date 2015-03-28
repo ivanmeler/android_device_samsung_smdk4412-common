@@ -63,11 +63,12 @@ struct exynos_camera_videosnapshot_resolution exynos_camera_videosnapshot_resolu
 	//Capture Size - Snapshot Size
 	{ 1920, 1080,	3264, 1836 },
 	{ 1280, 720,	3264, 1836 },
+	{ 1024, 768,	3264, 2488},
+	{ 960, 720,	3264, 2448 },
+	{ 960, 540,	3264, 1836 },
 	{ 720, 480,	3264, 2176 },
 	{ 640, 480,	3264, 2488 },
-	{ 352, 288,	3264, 2488 },
 	{ 320, 240,	3264, 2488 },
-	{ 176, 144,	3264, 2488 },
 };
 
 struct exynos_camera_preset exynos_camera_presets_smdk4x12[] = {
@@ -86,7 +87,7 @@ struct exynos_camera_preset exynos_camera_presets_smdk4x12[] = {
 		.vertical_view_angle = 49.3f,
 		.metering = METERING_CENTER,
 		.params = {
-			.preview_size_values = "960x720,1280x720,1184x666,960x640,704x576,640x480,352x288,320x240",
+			.preview_size_values = "1280x720,1184x666,1008x672,960x720,880x720,640x480,352x288,320x240",
 			.preview_size = "960x720",
 			.preview_format_values = "yuv420sp,yuv420p,rgb565",
 			.preview_format = "yuv420sp",
@@ -95,7 +96,7 @@ struct exynos_camera_preset exynos_camera_presets_smdk4x12[] = {
 			.preview_fps_range_values = "(15000,15000),(15000,30000),(30000,30000)",
 			.preview_fps_range = "15000,30000",
 
-			.picture_size_values = "640x480,1024x768,1280x720,1600x1200,2560x1920,3264x2448,2048x1536,3264x1836,2048x1152,3264x2176",
+			.picture_size_values = "3264x2448,3264x2176,3264x1836,3264x1836,2560x1920,2048x1536,2048x1152,1600x1200,1280x720,1024x768,960x720,960x540,640x480",
 			.picture_size = "3264x2448",
 			.picture_format_values = "jpeg",
 			.picture_format = "jpeg",
@@ -109,7 +110,7 @@ struct exynos_camera_preset exynos_camera_presets_smdk4x12[] = {
 			.full_video_snap_supported = 0,
 
 			.recording_size = "1280x720",
-			.recording_size_values = "1280x720,1920x1080,720x480,640x480,352x288,320x240,176x144",
+			.recording_size_values = "1920x1080,1280x720,1024x768,960x720,960x540,720x480,640x480,320x240",
 			.recording_format = "yuv420sp",
 
 			.focus_mode = "auto",
@@ -162,7 +163,7 @@ struct exynos_camera_preset exynos_camera_presets_smdk4x12[] = {
 		.mbus_resolutions_count = 0,
 
 		.videosnapshot_resolutions = (struct exynos_camera_videosnapshot_resolution *) &exynos_camera_videosnapshot_resolutions_s5c73m3,
-		.videosnapshot_resolutions_count = 7,
+		.videosnapshot_resolutions_count = 8,
 	},
 	{
 		.name = "S5K6A3",
