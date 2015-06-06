@@ -1,8 +1,4 @@
 sbin/cbd
-system/bin/bcm4334.hcd
-system/bin/bcm4334_murata.hcd
-system/bin/bcm4334_semco.hcd
-system/bin/bcm4334_semcosh.hcd
 system/bin/gps.cer
 system/cameradata/datapattern_420sp.yuv
 system/cameradata/datapattern_front_420sp.yuv
@@ -43,6 +39,9 @@ system/vendor/firmware/SlimISP_ZD.bin
 system/vendor/firmware/SlimISP_ZH.bin
 system/vendor/firmware/SlimISP_ZK.bin
 system/vendor/firmware/SlimISP_ZM.bin
+system/vendor/firmware/bluetooth/bcm4334.hcd
+system/vendor/firmware/bluetooth/bcm4334_murata.hcd
+system/vendor/firmware/bluetooth/bcm4334_semcosh.hcd
 system/vendor/lib/drm/libdrmwvmplugin.so
 system/vendor/lib/libwvdrm_L1.so
 system/vendor/lib/libwvm.so
