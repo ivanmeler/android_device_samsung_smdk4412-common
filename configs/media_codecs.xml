@@ -168,4 +168,5 @@ Only the three quirks included above are recognized at this point:
             <Feature name="bitrate-modes" value="VBR,CBR" />
         </MediaCodec>
     </Encoders>
+    <Include href="media_codecs_ffmpeg.xml" />
 </MediaCodecs>
