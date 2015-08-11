@@ -85,6 +85,11 @@ PRODUCT_PACKAGES += \
     lights.exynos4 \
     macloader \
     tinymix
+    
+# Chromium
+PRODUCT_PACKAGES += \
+    libwebviewchromium_plat_support \
+    libwebviewchromium_loader
 
 ifneq ($(TARGET_HAS_CAM_FLASH) ,false)
 PRODUCT_PACKAGES += \
