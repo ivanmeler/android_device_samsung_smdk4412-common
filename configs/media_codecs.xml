@@ -76,97 +76,57 @@ Only the three quirks included above are recognized at this point:
 -->
 
 <MediaCodecs>
-
     <Include href="media_codecs_google_audio.xml" />
     <Include href="media_codecs_google_telephony.xml" />
-
     <Decoders>
-        <MediaCodec name="OMX.SEC.AVC.Decoder" type="video/avc" />
-        <MediaCodec name="OMX.SEC.M4V.Decoder" type="video/mp4v-es" />
-        <MediaCodec name="OMX.SEC.WMV.Decoder" type="video/x-ms-wmv" />
-    </Decoders>
-
-    <Encoders>
-        <MediaCodec name="OMX.SEC.AVC.Encoder" type="video/avc" />
-        <MediaCodec name="OMX.SEC.M4V.Encoder" type="video/mp4v-es" />
-    </Encoders>
-    <Decoders>
-        <MediaCodec name="OMX.google.mpeg4.decoder">
-            <Type name="video/mp4v-es" />
-            <Type name="video/mp4v-esdp" />
-            <Limit name="size" min="2x2" max="352x288" />
+        <MediaCodec name="OMX.SEC.MPEG4.Decoder" type="video/mp4v-es" >
+            <Limit name="size" min="64x64" max="1920x1088" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" range="12-11880" />
-            <Limit name="bitrate" range="1-384000" />
-            <Feature name="adaptive-playback" />
+            <Limit name="blocks-per-second" min="1" max="244800" />
+            <Limit name="bitrate" range="1-20000000" />
         </MediaCodec>
-        <MediaCodec name="OMX.google.h263.decoder" type="video/3gpp">
-            <Limit name="size" min="2x2" max="352x288" />
-            <Limit name="alignment" value="2x2" />
-            <Limit name="bitrate" range="1-384000" />
-            <Feature name="adaptive-playback" />
-        </MediaCodec>
-        <MediaCodec name="OMX.google.h264.decoder" type="video/avc">
-            <Limit name="size" min="2x2" max="2048x2048" />
+        <MediaCodec name="OMX.SEC.H263.Decoder" type="video/3gpp" >
+            <Limit name="size" min="64x64" max="800x480" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" range="1-983040" />
-            <Limit name="bitrate" range="1-40000000" />
+            <Limit name="blocks-per-second" min="1" max="45000" />
+            <Limit name="bitrate" range="1-6000000" />
         </MediaCodec>
-        <MediaCodec name="OMX.google.hevc.decoder" type="video/hevc">
-            <Limit name="size" min="2x2" max="2048x2048" />
-            <Limit name="alignment" value="2x2" />
-            <Limit name="block-size" value="8x8" />
-            <Limit name="block-count" range="1-139264" />
-            <Limit name="blocks-per-second" range="1-2000000" />
-            <Limit name="bitrate" range="1-10000000" />
-            <Feature name="adaptive-playback" />
-        </MediaCodec>
-        <MediaCodec name="OMX.google.vp8.decoder" type="video/x-vnd.on2.vp8">
-            <Limit name="size" min="2x2" max="2048x2048" />
+        <MediaCodec name="OMX.SEC.AVC.Decoder" type="video/avc" >
+            <Limit name="size" min="64x64" max="1920x1088" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" range="1-1000000" />
-            <Limit name="bitrate" range="1-40000000" />
-            <Feature name="adaptive-playback" />
-        </MediaCodec>
-        <MediaCodec name="OMX.google.vp9.decoder" type="video/x-vnd.on2.vp9">
-            <Limit name="size" min="2x2" max="2048x2048" />
-            <Limit name="alignment" value="2x2" />
-            <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" range="1-500000" />
-            <Limit name="bitrate" range="1-40000000" />
-            <Feature name="adaptive-playback" />
+            <Limit name="blocks-per-second" min="1" max="244800" />
+            <Limit name="bitrate" range="1-20000000" />
         </MediaCodec>
     </Decoders>
-
     <Encoders>
-        <MediaCodec name="OMX.google.h263.encoder" type="video/3gpp">
-            <Limit name="size" min="16x16" max="176x144" />
-            <Limit name="alignment" value="16x16" />
-            <Limit name="bitrate" range="1-128000" />
-        </MediaCodec>
-        <MediaCodec name="OMX.google.h264.encoder" type="video/avc">
-            <Limit name="size" min="16x16" max="896x896" />
-            <Limit name="alignment" value="16x16" />
-            <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" range="1-11880" />
-            <Limit name="bitrate" range="1-2000000" />
-        </MediaCodec>
-        <MediaCodec name="OMX.google.mpeg4.encoder" type="video/mp4v-es">
-            <Limit name="size" min="16x16" max="176x144" />
-            <Limit name="alignment" value="16x16" />
-            <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" range="12-1485" />
-            <Limit name="bitrate" range="1-64000" />
-        </MediaCodec>
-        <MediaCodec name="OMX.google.vp8.encoder" type="video/x-vnd.on2.vp8">
-            <Limit name="size" min="2x2" max="2048x2048" />
+        <MediaCodec name="OMX.SEC.MPEG4.Encoder" type="video/mp4v-es" >
+            <Quirk name="requires-loaded-to-idle-after-allocation"/>
+            <Limit name="size" min="96x64" max="1920x1088" />
             <Limit name="alignment" value="2x2" />
-            <Limit name="bitrate" range="1-40000000" />
-            <Feature name="bitrate-modes" value="VBR,CBR" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="blocks-per-second" min="1" max="244800" />
+            <Limit name="bitrate" range="1-20000000" />
+        </MediaCodec>
+        <MediaCodec name="OMX.SEC.H263.Encoder" type="video/3gpp" >
+            <Quirk name="requires-loaded-to-idle-after-allocation" />
+            <Limit name="size" min="96x64" max="800x480" />
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="blocks-per-second" min="1" max="244800" />
+            <Limit name="bitrate" range="1-6000000" />
+        </MediaCodec>
+        <MediaCodec name="OMX.SEC.AVC.Encoder" type="video/avc" >
+            <Quirk name="requires-loaded-to-idle-after-allocation" />
+            <Limit name="size" min="96x64" max="1920x1088" />
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="blocks-per-second" min="1" max="244800" />
+            <Limit name="bitrate" range="1-20000000" />
         </MediaCodec>
     </Encoders>
+    <Include href="media_codecs_google_video_le.xml" />
     <Include href="media_codecs_ffmpeg.xml" />
 </MediaCodecs>
