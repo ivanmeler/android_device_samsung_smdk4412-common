@@ -87,6 +87,10 @@ PRODUCT_PACKAGES += \
     macloader \
     tinymix
 
+# Stlport    
+PRODUCT_PACKAGES += \
+    libstlport
+
 ifneq ($(TARGET_HAS_CAM_FLASH) ,false)
 PRODUCT_PACKAGES += \
     Torch
