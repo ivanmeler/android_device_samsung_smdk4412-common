@@ -23,6 +23,7 @@
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" range="12-11880" />
             <Limit name="bitrate" range="1-384000" />
+            <Feature name="adaptive-playback" />
         </MediaCodec>
         <MediaCodec name="OMX.google.h263.decoder" type="video/3gpp">
             <!-- profiles and levels:  ProfileBaseline : Level30, ProfileBaseline : Level45
@@ -30,6 +31,7 @@
             <Limit name="size" min="2x2" max="352x288" />
             <Limit name="alignment" value="2x2" />
             <Limit name="bitrate" range="1-384000" />
+            <Feature name="adaptive-playback" />
         </MediaCodec>
         <MediaCodec name="OMX.google.h264.decoder" type="video/avc">
             <!-- profiles and levels:  ProfileBaseline : Level51 -->
@@ -39,6 +41,7 @@
             <Limit name="block-count" range="1-8160" />
             <Limit name="blocks-per-second" range="1-489600" />
             <Limit name="bitrate" range="1-40000000" />
+            <Feature name="adaptive-playback" />
         </MediaCodec>
         <MediaCodec name="OMX.google.hevc.decoder" type="video/hevc">
             <!-- profiles and levels:  ProfileMain : MainTierLevel51 -->
@@ -48,6 +51,7 @@
             <Limit name="block-count" range="1-139264" />
             <Limit name="blocks-per-second" range="1-432000" />
             <Limit name="bitrate" range="1-5000000" />
+            <Feature name="adaptive-playback" />
         </MediaCodec>
         <MediaCodec name="OMX.google.vp8.decoder" type="video/x-vnd.on2.vp8">
             <Limit name="size" min="2x2" max="2048x2048" />
@@ -56,6 +60,7 @@
             <Limit name="block-count" range="1-8160" />
             <Limit name="blocks-per-second" range="1-500000" />
             <Limit name="bitrate" range="1-40000000" />
+            <Feature name="adaptive-playback" />
         </MediaCodec>
         <MediaCodec name="OMX.google.vp9.decoder" type="video/x-vnd.on2.vp9">
             <Limit name="size" min="2x2" max="1280x1280" />
@@ -64,8 +69,10 @@
             <Limit name="block-count" range="1-3600" />
             <Limit name="blocks-per-second" range="1-108000" />
             <Limit name="bitrate" range="1-5000000" />
+            <Feature name="adaptive-playback" />
         </MediaCodec>
     </Decoders>
+
     <Encoders>
         <MediaCodec name="OMX.google.h263.encoder" type="video/3gpp">
             <!-- profiles and levels:  ProfileBaseline : Level45 -->
