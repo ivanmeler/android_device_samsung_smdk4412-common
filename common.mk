@@ -74,6 +74,7 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
     com.android.future.usb.accessory \
+    Gello \
     gralloc.exynos4 \
     hwcomposer.exynos4 \
     libExynosHWCService \
